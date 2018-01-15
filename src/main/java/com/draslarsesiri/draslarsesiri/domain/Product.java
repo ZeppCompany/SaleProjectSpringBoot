@@ -21,6 +21,7 @@ public class Product {
 
     private double productPrice;
 
+
     private double productPriceDo;
 
     private boolean productOnAction;
@@ -40,11 +41,13 @@ public class Product {
     private int productNumberOfImages;
 
     @JsonIgnore
-    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name= "productTypeId")
     private ProductType productType;
 
     @JsonIgnore
-    @OneToOne(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "productDedicatedId")
     private ProductDedicated productDedicated;
 
     @Transient

@@ -1,0 +1,21 @@
+th.sorting_asc{
+    border: none;
+    padding-top: 20px;
+    padding-bottom: 0;
+    color: white;
+}
+
+th.sorting_desc{
+    border: none;
+    padding-top: 20px;
+    padding-bottom: 0;
+    color: white;
+}
+
+#products_wrapper{
+    padding: 10px;
+}
+
+.dataTables_length, #products_filter, .dataTables_info{
+    color: white;
+}

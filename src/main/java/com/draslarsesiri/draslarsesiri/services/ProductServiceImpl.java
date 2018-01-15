@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @Service
@@ -23,4 +24,15 @@ public class ProductServiceImpl implements ProductService{
     public List<Product> getProduct() {
         return (List<Product>) productRepository.findAll();
     }
+
+    @Override
+    public Product findById(int productId) {
+        Optional<Product> product = productRepository.findById(productId);
+        if(!product.isPresent()){
+            throw new RuntimeException("Proizvod nije pronađen!");
+        }
+
+        return product.get();
+    }
+
 }

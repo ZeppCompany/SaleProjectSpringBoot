@@ -11,8 +11,7 @@ public class ProductDedicated {
 
     private String productDedicatedName;
 
-    @OneToOne
-    @JoinColumn(name="productId")
+    @OneToOne(mappedBy = "productDedicated")
     private Product product;
 
     public int getProductDedicatedId() {

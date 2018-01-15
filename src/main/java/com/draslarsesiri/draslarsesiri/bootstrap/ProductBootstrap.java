@@ -63,6 +63,9 @@ public class ProductBootstrap implements ApplicationListener<ContextRefreshedEve
         sesir.setProductMaterial("Zečija dlaka");
         sesir.setProductSeason("Letnja Sezona");
 
+        sesir.setProductDedicated(productDedicated);
+        sesir.setProductType(productType);
+
         productList.add(sesir);
 
         Product kapa = new Product();
@@ -72,7 +75,7 @@ public class ProductBootstrap implements ApplicationListener<ContextRefreshedEve
         productDedicatedRepository.save(productDedicated1);
 
         ProductType productType1 = new ProductType();
-        productType1.setProductTypeName("šešir");
+        productType1.setProductTypeName("kačket");
         productType1.setProduct(kapa);
         productTypeRepository.save(productType1);
 
@@ -87,6 +90,9 @@ public class ProductBootstrap implements ApplicationListener<ContextRefreshedEve
         kapa.setProductPriceDo(4780);
         kapa.setProductMaterial("Somot, Krzno, Lan");
         kapa.setProductSeason("Zimska Sezona");
+
+        kapa.setProductDedicated(productDedicated1);
+        kapa.setProductType(productType1);
 
         productList.add(kapa);
 
@@ -113,6 +119,9 @@ public class ProductBootstrap implements ApplicationListener<ContextRefreshedEve
         zenski.setProductPriceDo(9299);
         zenski.setProductMaterial("Keper, filc");
         zenski.setProductSeason("Zimska Sezona");
+
+        zenski.setProductDedicated(productDedicated2);
+        zenski.setProductType(productType2);
 
         productList.add(zenski);
 

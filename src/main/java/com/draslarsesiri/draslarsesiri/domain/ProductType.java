@@ -7,20 +7,19 @@ public class ProductType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int prodductTypeId;
+    private int productTypeId;
 
     private String productTypeName;
 
-    @OneToOne
-    @JoinColumn(name="productId")
+    @OneToOne(mappedBy = "productType")
     private Product product;
 
-    public int getProdductTypeId() {
-        return prodductTypeId;
+    public int getProductTypeId() {
+        return productTypeId;
     }
 
-    public void setProdductTypeId(int prodductTypeId) {
-        this.prodductTypeId = prodductTypeId;
+    public void setProductTypeId(int productTypeId) {
+        this.productTypeId = productTypeId;
     }
 
     public String getProductTypeName() {
